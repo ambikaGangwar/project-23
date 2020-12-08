@@ -45,12 +45,12 @@ function setup() {
 	
         boxleftSprite=createSprite(boxPosition,boxY,20,100);
 	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
-	boxleftSprite=createSprite(boxPosition+200 , boxY, 20,100);
+	boxBottomSprite=createSprite(boxPosition+200 , boxY, 20,100);
 
 
 	boxleftSprite.shapeColor=color(255,0,0);
 	boxBase.shapeColor=color(255,0,0);
-	boxleftSprite.shapeColor=color(255,0,0);
+	boxBottomSprite.shapeColor=color(255,0,0);
 
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} );
 	boxBottomBody = Bodies.rectangle(boxPosition+100, boxY+45-20, 200,20 , {isStatic:true} );
