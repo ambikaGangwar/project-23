@@ -42,26 +42,26 @@ function setup() {
 
 	boxPosition=width/2-100;
 	boxY=610;
+	
+        boxleftSprite=createSprite(boxPosition,boxY,20,100);
+	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
+	boxleftSprite=createSprite(boxPosition+200 , boxY, 20,100);
 
-	boxleftSprite=createSprite(boxPosition,boxY,20,100);
+
+	boxleftSprite.shapeColor=color(255,0,0);
+	boxBase.shapeColor=color(255,0,0);
 	boxleftSprite.shapeColor=color(255,0,0);
 
 	boxLeftBody = Bodies.rectangle(boxPosition+20, boxY, 20,100 , {isStatic:true} );
-	World.add(world, boxLeftBody);
-   
-	boxBase=createSprite(boxPosition+100, boxY+40, 200,20);
-	boxBase.shapeColor=color(255,0,0);
-   
 	boxBottomBody = Bodies.rectangle(boxPosition+100, boxY+45-20, 200,20 , {isStatic:true} );
-	World.add(world, boxBottomBody);
-   
-	boxleftSprite=createSprite(boxPosition+200 , boxY, 20,100);
-	boxleftSprite.shapeColor=color(255,0,0);
-   
 	boxRightBody = Bodies.rectangle(boxPosition+200-20 , boxY, 20,100 , {isStatic:true} );
+
+	World.add(world, boxLeftBody);
+	World.add(world, boxBottomBody);
 	World.add(world, boxRightBody);
-	
-	Engine.run(engine);
+
+
+	Engine.run(engine)
   
 }
 
